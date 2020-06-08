@@ -1,0 +1,16 @@
+[
+  {
+    "content": "10 minute abs",
+    "days": ["mon", "wed", "fri", "sat"],
+    "projectId": <your-project-id-here>,
+    "sectionId": <your-section-id-here>,
+    "comments": [
+      "Set a link to the youtube video"
+    ]
+  },
+  {
+    "content": "Solve at least 2 problems on Firecode.io",
+    "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+    "projectId": <your-project-id-here>
+  }
+]
