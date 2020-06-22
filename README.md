@@ -1,4 +1,4 @@
-# Todoist Next Week
+# Next Week with Todoist
 
 Todoist is the tool that I use for organizing my life.
 
