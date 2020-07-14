@@ -3,6 +3,9 @@ import * as lambda from "@aws-cdk/aws-lambda";
 import * as awsEventsTargets from "@aws-cdk/aws-events-targets";
 import * as awsEvents from "@aws-cdk/aws-events";
 import * as path from "path";
+import * as dotenv from "dotenv";
+
+dotenv.config();
 
 export class InfrastructureStack extends cdk.Stack {
   constructor(scope: cdk.Construct, id: string, props?: cdk.StackProps) {
@@ -15,6 +18,9 @@ export class InfrastructureStack extends cdk.Stack {
         runtime: lambda.Runtime.NODEJS_12_X,
         handler: "handler.handler",
         code: lambda.Code.fromAsset(path.join("..", "app", "dist")),
+        environment: {
+          API_TOKEN: process.env.API_TOKEN ? process.env.API_TOKEN : "",
+        },
       }
     );
 
