@@ -10,7 +10,7 @@
   },
   {
     "content": "Solve at least 2 problems on Firecode.io",
-    "days": ["mon", "tue", "wed", "thu", "fri", "sat", "sun"],
+    "days": ["mon", "tue", "wed", "thu", "fri", "sat"],
     "projectId": <your-project-id-here>
   }
 ]
