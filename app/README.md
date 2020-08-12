@@ -2,7 +2,7 @@
 
 Todoist is the tool that I use for organizing my life.
 
-Todoist has many options for creating recurring tasts, however, I created this script to have a fine-grained control over what tasks should get created, in which project, under which section, with or without comments attached to them etc.
+Todoist has many options for creating recurring tasks. However, I do not like some of the ways Todoist handles the recurring tasks. I created this script to have a fine-grained control over what tasks should get created, in which project, under which section, with or without comments attached to them etc.
 
 ## Dependencies
 
@@ -13,9 +13,16 @@ npm install -g typescript
 npm install -g ts-node
 ```
 
+If you want to be able to deploy the script to AWS, you need to have AWS CDK installed:
+
+```
+npm install -g aws-cdk
+```
+
 Install the project dependencies by running:
 
 ```
+cd app
 npm install
 ```
 
@@ -35,9 +42,13 @@ The ultimate intention of this script is to be run automatically as a AWS Lambda
 ts-node src/index.ts
 ```
 
-## References to Use During Development
+## Deployment on AWS
 
-- https://developer.todoist.com/rest/v1/
-- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-- https://medium.com/@isachenx/making-a-fetch-request-with-typescript-4a6b523f1e69
-- https://scotch.io/@nwayve/how-to-build-a-lambda-function-in-typescript
+In the `infrastructure` folder, you can find code that will set up the necessary infrastructure on AWS, so the script would be run automatically once per week, on Sunday.
+
+To deploy the code on AWS:
+
+```
+cd infrastructure
+cdk deploy
+```
