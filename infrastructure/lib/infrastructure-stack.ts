@@ -21,6 +21,8 @@ export class InfrastructureStack extends cdk.Stack {
         environment: {
           API_TOKEN: process.env.API_TOKEN ? process.env.API_TOKEN : "",
         },
+        timeout: cdk.Duration.seconds(30),
+        retryAttempts: 0,
       }
     );
 
