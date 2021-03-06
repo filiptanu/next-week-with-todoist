@@ -30,7 +30,7 @@ After that, you are good to go to run the script.
 
 ## Setting up the tasks in a json file
 
-Rename the `example.tasks.json` to `tasks.json`.
+Rename the `app/example.tasks.json` to `app/tasks.json`.
 
 Add all the tasks you want to add to Todoist (see the two example tasks already contained in the document). Make sure to replace the placeholders `<your-project-id-here>` and `<your-section-id-here>` with the appropriate ids from your Todoist account.
 
@@ -39,6 +39,7 @@ Add all the tasks you want to add to Todoist (see the two example tasks already 
 The ultimate intention of this script is to be run automatically as a AWS Lambda function. However, until set up properly, I will run it weekly, every sunday.
 
 ```
+cd app
 ts-node src/index.ts
 ```
 
